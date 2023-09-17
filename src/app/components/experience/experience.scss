@@ -1,0 +1,97 @@
+.experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 500px;
+
+    grid-area: experience;
+
+    p {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+        color: var(--text-secondary);
+        text-align: center;
+    }
+
+    .experience-time {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .program-languages {
+
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        img {
+            filter: grayscale(100%);
+        }
+
+        .experience-unit {
+            display: flex;
+            width: 300px;
+            height: 30px;
+            border-radius: 24px;
+            border: 1px solid var(--text-secondary);
+
+            justify-content: flex-start;
+            align-items: center;
+
+            .experience-measure {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 999; 
+
+                border-radius: 24px;
+                height: 30px;
+                background: linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212) 55.4%, rgb(255, 233, 171) 100.2%);
+                border: 1px solid linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212) 55.4%, rgb(255, 233, 171) 100.2%);
+
+                color: var(--text-primary);
+                font-weight: 400;
+                text-align: center;
+                font-size: 13px;
+
+                animation-duration: 2s;
+                animation-name: experience-measure;
+
+                @keyframes experience-measure {
+                    from {
+                        width: 0;
+                    }
+                    to {
+                        width: 33% 66%;
+                    }
+                }
+
+                &.measure-1 {
+                    width: 33%;
+                }
+
+                &.measure-2 {
+                    width: 66%;
+                }
+            }
+        }
+
+    }
+
+    @media (min-width: 768px) {
+        align-items: flex-start;
+        
+        p {
+            font-size: 24px;
+            line-height: 36px;
+            text-align: start;
+        }
+    }
+}
+
