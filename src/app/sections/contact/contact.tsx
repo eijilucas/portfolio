@@ -50,7 +50,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="contact" id="contact">
+    <div className="contact">
       <div className="contact-content">
         <div className="contact-inputs">
           <div className="title">
@@ -111,9 +111,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <div className="direitos">
-        <p>© 2023 / Lucas Eiji / Todos os direitos reservados</p>
-      </div>
+      <p>© 2023 / Lucas Eiji / Todos os direitos reservados</p>
     </div>
   );
 }
