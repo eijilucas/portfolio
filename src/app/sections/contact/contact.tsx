@@ -1,24 +1,23 @@
-"use client"
+"use client";
 
 import { Linkedin } from "@/app/components/icons/linkedin";
 import "./contact.scss";
 import { ChevronRight } from "@/app/components/icons/chevron-right";
 import { Github } from "@/app/components/icons/github";
 import { useState } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-
-  const [email, setEmail] = useState('')
-  const [name, setName] = useState('')
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
   function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    
-    if(name === '' || email === '' || subject === '' || message === '') {
-      alert("Preencha todos os campos")
+
+    if (name === "" || email === "" || subject === "" || message === "") {
+      alert("Preencha todos os campos");
       return;
     }
 
@@ -26,23 +25,32 @@ export default function Contact() {
       from_name: name,
       email: email,
       message: message,
-      subject: subject
-    }
+      subject: subject,
+    };
 
-    emailjs.send("service_4g9rz9n", "template_y8a1rlc", templateParam , 'UWnQjeUN0cQaSq3lv')
-    .then((response) => {
-      console.log("Email enviado", response)
-      setName('')
-      setEmail('')
-      setSubject('')
-      setMessage('')
-    }, (err) => {
-      console.log("Erro: ",  err)
-    })
+    emailjs
+      .send(
+        "service_4g9rz9n",
+        "template_y8a1rlc",
+        templateParam,
+        "UWnQjeUN0cQaSq3lv"
+      )
+      .then(
+        (response) => {
+          console.log("Email enviado", response);
+          setName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+        },
+        (err) => {
+          console.log("Erro: ", err);
+        }
+      );
   }
 
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <div className="contact-content">
         <div className="contact-inputs">
           <div className="title">
@@ -63,11 +71,11 @@ export default function Contact() {
                 placeholder="Digite seu e-mail"
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <input 
-              type="text" 
-              value={subject} 
-              placeholder="Digite o assunto" 
-              onChange={(e) => setSubject(e.target.value)}
+              <input
+                type="text"
+                value={subject}
+                placeholder="Digite o assunto"
+                onChange={(e) => setSubject(e.target.value)}
               />
               <textarea
                 placeholder="Sua mengagem..."
@@ -82,24 +90,30 @@ export default function Contact() {
         </div>
 
         <div className="contact-infos">
-            <div className="email">
-                <h1>E-mail para contato</h1>
-                <p>lucas09.eiji@gmail.com</p>
-            </div>
+          <div className="email">
+            <h1>E-mail para contato</h1>
+            <p>lucas09.eiji@gmail.com</p>
+          </div>
 
-            <div className="social-midia">
-                <div className="git">
-                <a href="https://github.com/eijilucas" target='_blank'><Github/></a>
-                <p>/eijilucas</p>
-                </div>
-                <div className="linkedin">
-                <a href="https://www.linkedin.com/in/eijilucas/" target='_blank'><Linkedin/></a>
-                <p>/eijilucas</p>
-                </div>
+          <div className="social-midia">
+            <div className="git">
+              <a href="https://github.com/eijilucas" target="_blank">
+                <Github />
+              </a>
+              <p>/eijilucas</p>
             </div>
+            <div className="linkedin">
+              <a href="https://www.linkedin.com/in/eijilucas/" target="_blank">
+                <Linkedin />
+              </a>
+              <p>/eijilucas</p>
+            </div>
+          </div>
         </div>
       </div>
-      <p>© 2023 / Lucas Eiji / Todos os direitos reservados</p>
+      <div className="direitos">
+        <p>© 2023 / Lucas Eiji / Todos os direitos reservados</p>
+      </div>
     </div>
   );
 }

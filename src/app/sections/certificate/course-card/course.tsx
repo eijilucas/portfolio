@@ -15,8 +15,6 @@ interface CourseCardProps {
 
 export function CourseCard({ title, instructor, institution, duration, certificateLink }: CourseCardProps) {
 
-    
-
     return (
         <div className="course-card">
             <div className="course-content">
