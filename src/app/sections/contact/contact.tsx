@@ -111,7 +111,9 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <p>© 2023 / Lucas Eiji / Todos os direitos reservados</p>
+      <div className="direitos">
+        <p>© 2023 / Lucas Eiji / Todos os direitos reservados</p>
+      </div>
     </div>
   );
 }
