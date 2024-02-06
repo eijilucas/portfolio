@@ -99,7 +99,7 @@ export default function Contact() {
             </div>
         </div>
       </div>
-      <p>© 2023 / Lucas Eiji / Todos os direitos reservados</p>
+      <p>© 2024 / Lucas Eiji / Todos os direitos reservados</p>
     </div>
   );
 }
