@@ -1,0 +1,47 @@
+.project {
+    width: 100vw;
+    height: fit-content;
+    background: var(--color-primary);
+
+    display: flex;
+    justify-content: center;
+
+    h2 {
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    .project-title {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        justify-content: center;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .project-content {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-cards {
+        display: flex;
+        justify-content: center;
+        gap: 28px;
+        align-items: center;
+        padding-bottom: 5rem;
+    }
+ 
+    @media (max-width:1140px) {
+        height: fit-content;
+        padding-bottom: 3rem;
+
+        .project-cards {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 2rem;
+        }
+    } 
+}

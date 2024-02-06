@@ -1,0 +1,28 @@
+:root {
+ --color-primary: #252526;
+ --bg-header: #1e1e1e;
+ --scroll-color: #007acc;
+ --color-secondary: rgb(11, 11, 11);
+ --color-tertiary: #fddced;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-color);
+}
+

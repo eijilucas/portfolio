@@ -1,0 +1,119 @@
+.start {
+    width: 100vw;
+    min-height: 100vh;
+
+    background: var(--color-primary);
+    display: flex;
+    justify-content: center;
+
+    h1 {
+        color: #fff;
+        font-size: 3.7rem;
+        font-family: Saria, sans-serif;
+    }
+
+    .start-content {
+        width: 80%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .start-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .start-items .start-information {
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem 0px;
+    }
+
+    .start-information {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 800px;
+        height: 380px;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .text span {
+        font-size: 2rem;
+        font-family: Arial;
+        color: white;
+        font-weight: 700;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+    .links a{
+        cursor: pointer;
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        background-color: rgb(31, 31, 31);
+    }
+
+    .line {
+        border-right: 2px solid #fff;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .typing-animation {
+        animation: cursorBlink 500ms infinite normal, typing 3s 1s normal;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes cursorBlink{
+        from {
+            border-right-color: #fff;
+        }
+        to {
+            border-right-color: transparent;
+        }
+    }
+
+    @media(min-width: 768px) {
+        .text {
+            text-align: start;
+            font-size: 2em;
+            align-items: start;
+        }
+
+        .start-information {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            width: 800px;
+            height: 380px;
+        }
+
+    }
+}
