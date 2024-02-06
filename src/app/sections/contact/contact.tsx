@@ -50,7 +50,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <div className="contact-content">
         <div className="contact-inputs">
           <div className="title">
